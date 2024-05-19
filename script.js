@@ -104,10 +104,6 @@ function comparison() {
             compScore = compScore + 1
         }
     }
-
-    else {
-        console.log("error in comparison function")
-    }
     
 }
 
@@ -125,16 +121,22 @@ function playGame() {
     console.log("There will be five rounds")
     userScore = 0;
     compScore = 0;
-    rocPapSci()
+
+    for (i = 0; i < 5; i++) {
+        rocPapSci()
+        console.log("Your Score: " + userScore)
+        console.log("Computer Score: " + compScore)
+
+    }
 
     if (compScore > userScore){
-        console.log("Computer wins!")
+        console.log("RESULT: Computer takes the game!")
     }
     if (compScore < userScore){
-        console.log("You win!")
+        console.log("RESULT: You win the game!")
     }
     if (compScore == userScore){
-        console.log("It's a tie!")
+        console.log("RESULT: Overall, it's a tie!")
     }
 }
 
